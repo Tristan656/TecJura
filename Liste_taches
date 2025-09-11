@@ -1,0 +1,51 @@
+Liste des tâches effectués pendant l'atelier :
+
+1. Config du routeur
+
+2. Installation AD
+
+3. Installation DHCP
+  Étendue : 
+    Nom : TecJura
+    Adresse IP de début : 10.217.100.1
+    Adresse IP de fin : 10.217.100.254
+    Masque de sous-réseau : 255.255.255.0
+    Durée du bail : 8 jours
+    Domaine parent : TecJura
+    Adresse réservée : 10.217.100.10
+
+4. Installation DNS
+
+5. OU et AGDLP : 
+  Utilisateur : albion_berisha, rodrigo_goncalves, tristan.chevre, user1
+  Groupes locaux : L_Administration_FC
+                   L_Administration_RW
+                   L_Administration_RO
+                   L_Developpement_FC
+                   L_Developpement_RW
+                   L_Developpement_RO
+                   L_Direction_FC
+                   L_Direction_RW
+                   L_Direction_RO
+                   L_Support_FC
+                   L_Support_RW
+                   L_Support_RO
+
+  Groupes globaux : G_Administration
+                    G_Developpement
+                    G_Direction
+                    G_Support
+
+  Ordinateur : CLI-1, CLI-2, CLI-3
+
+6. GPO :
+  1. Fond d’écran
+  2. Gestion des mots de passe
+  3. Verrouillage automatique de session
+  4. Lecteurs réseau automatiques
+  5. Création d’un lien sur le bureau
+
+
+
+
+
