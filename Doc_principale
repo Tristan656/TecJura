@@ -380,14 +380,26 @@ Cette documentation explique comment mettre en place une règle de pare-feu sur 
 ### 3. Vérification de la connexion
 - Une fois connecté, vous pouvez vérifier votre adresse IP publique pour confirmer que votre connexion passe bien par le serveur VPN sélectionné.
 
-## Rest
+## 17. Sauvegarde du serveur
+
+- Ouvrir une invite de commande et taper :
+
+     `Install-WindowsFeature -Name Windows-Server-Backup`
+     
+- Aller ensuite dans le gestionnaire de serveur → **Outils** → **Sauvegarde Windows Server**.
+- Cliquer sur **Sauvegarde locale** → dans le menu à gauche, **Sauvegarde unique**.
+- Type de configuration : **Personnalisé**.
+- Ajouter des éléments : **État du système**.
+- Cocher **Dossier partagé distant**.
+- Emplacement : **\\\DC1\Partage\Image_système**.
+- Cocher **Sauvegarder**.
 
 
 ## 18. Commandes utiles (administration GPO)
 
-- **Forcer l’application immédiate :**
+- Forcer l’application immédiate :
   
   `gpupdate /force`
-- **Générer le fichier html récapitulatif des droits GPO :**
+- Générer le fichier html récapitulatif des droits GPO :
 
   `gpresult /h gpresult.html`
