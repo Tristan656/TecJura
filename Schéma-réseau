@@ -1,0 +1,33 @@
+
+        Schéma réseau -----> Chaque département a une infrastructure semblable à celle-ci
+
+                 IP fixe           +------- Configuré via DHCP -------+
+                 DC1 10.217.100.20/24 -> Adresse IP et masque (DC1)
+                 Routeur 10.217.100.2 -> Adresse passerelle 
+                 DNS 10.217.100.20 -> Adresse du serveur DNS
+                +----------------------------------+
+
+                               |
+                               |
+         ,---------------------'---------------------,
+         |                                           |
+     ,---'---,                                 10.217.100.2
+   .(' FAI ') +---------+                  +------------------+
+  (Internet)--| Firewall|------------------|     Routeur      |
+   `-.___.-'  +---------+                  +---------+--------+
+                                                  |
+                                                  |
+                                          +-------+--------+
+                     ---------------------|     Switch     |
+                    |              |      +-.-.-.-.-.-.-.- +
+                    |              |              |
+            ,-------'         ,----'----,     ,---'---,
+            |                 |         |     |       |
+         +--^--+          +---^---+  +--^--+  +--^--+
+         | DC1 |          | CLI-1 |  |CLI-2|  |CLI-3|
+         '-----'          '-------'  '-----'  '-----'
+
+DC1 : 10.217.100.20 (Serveur)
+CLI-1 : 10.217.100.51 (Client 1 - DHCP, ip dynamique)
+CLI-2 : 10.217.100.52 (Client 2 - DHCP, ip dynamique)
+CLI-3 : 10.217.100.20 (Client 3 - DHCP)
